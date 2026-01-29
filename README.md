@@ -4,12 +4,11 @@ Shared Claude Code skills for the Fence team.
 
 ## Structure
 
-Skills are organized by category:
+Skills are organized by category (WIP):
 
 ```
 /productivity     - Daily workflows, meeting prep, time management
 /engineering      - Code review, debugging, deployment helpers
-/integrations     - Third-party service integrations (Linear, Notion, etc.)
 ```
 
 ## Installation
