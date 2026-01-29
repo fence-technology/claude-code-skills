@@ -45,5 +45,5 @@ Get your Linear API key from: https://linear.app/settings/api
 ## Installation
 
 ```bash
-cp -r productivity/project-daily-prep ~/.claude/skills/
+cp -r productivity/project-daily-prep ~/.claude/skills/project-daily-prep
 ```
