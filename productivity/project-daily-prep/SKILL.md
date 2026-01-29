@@ -1,5 +1,5 @@
 ---
-name: daily-prep
+name: project-daily-prep
 description: Prepare for project daily meetings as a project lead. Reviews yesterday's commitments, compares against current status, identifies deviations and questions to ask the team.
 argument-hint: [project-name]
 disable-model-invocation: true
@@ -41,7 +41,7 @@ First, verify Linear MCP is available by attempting to list teams:
       }
       ```
    3. Restart Claude Code
-   4. Run /daily-prep again
+   4. Run /project-daily-prep again
    ```
    - Stop execution here
 3. If successful, proceed to Phase 1

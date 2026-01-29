@@ -16,15 +16,15 @@ Skills are organized by category (WIP):
 To install a skill, copy the skill folder to your local Claude skills directory:
 
 ```bash
-# Example: Install the daily-prep skill
-cp -r productivity/daily-prep ~/.claude/skills/
+# Example: Install the project-daily-prep skill
+cp -r productivity/project-daily-prep ~/.claude/skills/
 ```
 
 Or clone the entire repo and symlink:
 
 ```bash
 git clone https://github.com/fence-technology/claude-code-skills.git ~/claude-code-skills
-ln -s ~/claude-code-skills/productivity/daily-prep ~/.claude/skills/daily-prep
+ln -s ~/claude-code-skills/productivity/project-daily-prep ~/.claude/skills/project-daily-prep
 ```
 
 ## Available Skills
@@ -33,7 +33,7 @@ ln -s ~/claude-code-skills/productivity/daily-prep ~/.claude/skills/daily-prep
 
 | Skill | Description | Usage |
 |-------|-------------|-------|
-| [daily-prep](productivity/daily-prep) | Prepare for daily standups by analyzing Linear issues and identifying deviations | `/daily-prep [project-name]` |
+| [project-daily-prep](productivity/project-daily-prep) | Prepare for daily standups by analyzing Linear issues and identifying deviations | `/project-daily-prep [project-name]` |
 
 ## Contributing
 

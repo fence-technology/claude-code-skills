@@ -1,16 +1,16 @@
-# Daily Prep Skill
+# Project Daily Prep Skill
 
-Prepare for daily standup meetings by analyzing Linear issues and identifying deviations from commitments.
+Prepare for project daily standup meetings by analyzing Linear issues and identifying deviations from commitments.
 
 ## Usage
 
 ```
-/daily-prep [project-name]
+/project-daily-prep [project-name]
 ```
 
 Example:
 ```
-/daily-prep rain-clearhaven
+/project-daily-prep rain-clearhaven
 ```
 
 ## Features
@@ -45,5 +45,5 @@ Get your Linear API key from: https://linear.app/settings/api
 ## Installation
 
 ```bash
-cp -r productivity/daily-prep ~/.claude/skills/
+cp -r productivity/project-daily-prep ~/.claude/skills/
 ```
