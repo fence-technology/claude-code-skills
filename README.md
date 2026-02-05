@@ -4,11 +4,11 @@ Shared Claude Code skills for the Fence team.
 
 ## Structure
 
-Skills are organized by category (WIP):
+Skills are organized by category:
 
 ```
 /productivity     - Daily workflows, meeting prep, time management
-/engineering      - Code review, debugging, deployment helpers
+/engineering      - Code review, debugging, deployment helpers, log investigation
 ```
 
 ## Installation
@@ -34,6 +34,12 @@ ln -s ~/claude-code-skills/productivity/project-daily-prep ~/.claude/skills/proj
 | Skill | Description | Usage |
 |-------|-------------|-------|
 | [project-daily-prep](productivity/project-daily-prep) | Prepare for daily standups by analyzing Linear issues and identifying deviations | `/project-daily-prep [project-name]` |
+
+### Engineering
+
+| Skill | Description | Usage |
+|-------|-------------|-------|
+| [cloudwatch-investigate](engineering/cloudwatch-investigate) | Investigate CloudWatch logs for a deal. Specify the error type (e.g., asset declaration, intake creation, metric calculation, webhook processing) and it auto-routes to the correct log group, traces errors to source code, and suggests fixes. | `/cloudwatch-investigate <deal_id> <error_type>` |
 
 ## Contributing
 
