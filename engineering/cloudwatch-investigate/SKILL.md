@@ -18,19 +18,31 @@ Investigate CloudWatch logs for a specific deal, automatically routing to the ap
 
 ## Phase 0: Pre-requisite Check
 
-### Docker
+### AWS CLI
 
-1. Check if Docker is running:
+1. First, check if AWS CLI is installed natively:
    ```bash
-   docker info &>/dev/null && echo "Docker is running" || echo "Docker not running"
+   which aws && aws --version
    ```
 
-2. If Docker is not running, start it:
+2. If AWS CLI is available natively, use it directly:
+   ```bash
+   aws logs filter-log-events ...
+   ```
+
+3. If AWS CLI is NOT installed, fall back to Docker:
+   ```bash
+   docker run --rm -v ~/.aws:/root/.aws amazon/aws-cli logs filter-log-events ...
+   ```
+
+4. If using Docker and it's not running, start it:
    ```bash
    open -a Docker
    # Wait for Docker to be ready
    for i in {1..30}; do docker info &>/dev/null && echo "Docker ready" && break || sleep 2; done
    ```
+
+**Preference order:** Native AWS CLI > Docker with AWS CLI image
 
 ### AWS Credentials via Leapp
 

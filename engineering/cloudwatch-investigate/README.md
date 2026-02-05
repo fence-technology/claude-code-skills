@@ -34,8 +34,10 @@ The `deal_id` is optional - you can also search by asset_external_id, contract_e
 
 ## Prerequisites
 
-### 1. Docker
-Must be installed and running. The skill will attempt to start Docker Desktop if it's not running.
+### 1. AWS CLI
+Either:
+- **Native AWS CLI** installed (`brew install awscli`), OR
+- **Docker** (fallback - uses `amazon/aws-cli` image)
 
 ### 2. AWS Credentials via Leapp
 
