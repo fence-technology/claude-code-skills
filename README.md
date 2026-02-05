@@ -39,7 +39,7 @@ ln -s ~/claude-code-skills/productivity/project-daily-prep ~/.claude/skills/proj
 
 | Skill | Description | Usage |
 |-------|-------------|-------|
-| [cloudwatch-investigate](engineering/cloudwatch-investigate) | Investigate CloudWatch logs for a deal. Specify the error type (e.g., asset declaration, intake creation, metric calculation, webhook processing) and it auto-routes to the correct log group, traces errors to source code, and suggests fixes. | `/cloudwatch-investigate <deal_id> <error_type>` |
+| [cloudwatch-investigate](engineering/cloudwatch-investigate) | Investigate CloudWatch logs. Specify the error type (e.g., asset declaration, intake creation, metric calculation, webhook processing) and optionally a deal_id or other identifier. Auto-routes to the correct log group, traces errors to source code, and suggests fixes. | `/cloudwatch-investigate [deal_id] <error_type>` |
 
 ## Contributing
 

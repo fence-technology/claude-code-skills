@@ -1,7 +1,7 @@
 ---
 name: cloudwatch-investigate
 description: Investigate CloudWatch logs for a deal. Automatically detects the appropriate log group based on the query context (API, assets processor, lambdas, etc.). Can trace errors back to source code and suggest fixes.
-argument-hint: <deal_id> [description of what to investigate]
+argument-hint: [deal_id] <description of what to investigate>
 disable-model-invocation: true
 allowed-prompts:
   - tool: Bash
@@ -72,10 +72,16 @@ This skill requires AWS credentials. We use **Leapp** to manage AWS credentials 
 
 ## Phase 1: Parse Arguments
 
-1. Extract the `deal_id` from the first argument (UUID format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
-2. Extract the investigation description from remaining arguments
-3. If no deal_id provided, ask the user:
-   - "Please provide the deal_id (UUID) you want to investigate"
+1. Check if the first argument is a UUID (format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+   - If yes, use it as the `deal_id` and extract the investigation description from remaining arguments
+   - If no, treat the entire argument as the investigation description (no deal_id filter)
+2. The `deal_id` is **optional** - searches can be performed without it using other identifiers:
+   - `asset_external_id` (e.g., "33112")
+   - `contract_external_id` (e.g., "5341")
+   - `correlation_id`
+   - Error messages or keywords
+3. If no deal_id and no other identifier is clear from the prompt, ask the user:
+   - "What identifier should I search for? (deal_id, asset_external_id, contract_external_id, or keyword)"
 
 ## Phase 2: Determine Log Group
 

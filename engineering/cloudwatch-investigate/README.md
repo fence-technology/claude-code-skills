@@ -5,8 +5,10 @@ Quickly investigate CloudWatch logs for a specific deal, automatically routing t
 ## Usage
 
 ```
-/cloudwatch-investigate <deal_id> [what to investigate]
+/cloudwatch-investigate [deal_id] <description of what to investigate>
 ```
+
+The `deal_id` is optional - you can also search by asset_external_id, contract_external_id, or keywords.
 
 ### Examples
 
@@ -14,17 +16,20 @@ Quickly investigate CloudWatch logs for a specific deal, automatically routing t
 # Investigate API errors for a deal
 /cloudwatch-investigate 57af6a49-74d2-41cf-bd5b-1e98c03df11d api errors
 
-# Check asset declarations
+# Check asset declarations for a deal
 /cloudwatch-investigate 57af6a49-74d2-41cf-bd5b-1e98c03df11d asset declaration failures
+
+# Search by asset_external_id (no deal_id needed)
+/cloudwatch-investigate asset_external_id 33112 declaration errors
+
+# Search by contract_external_id
+/cloudwatch-investigate contract 5341 creation errors
 
 # Investigate metric calculations
 /cloudwatch-investigate 57af6a49-74d2-41cf-bd5b-1e98c03df11d metric calculation
 
 # Check webhook processing
-/cloudwatch-investigate 57af6a49-74d2-41cf-bd5b-1e98c03df11d monerium webhook
-
-# General investigation (defaults to API logs)
-/cloudwatch-investigate 57af6a49-74d2-41cf-bd5b-1e98c03df11d
+/cloudwatch-investigate monerium webhook errors last hour
 ```
 
 ## Prerequisites
