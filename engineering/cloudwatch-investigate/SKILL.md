@@ -186,6 +186,10 @@ EOF
 
 **CRITICAL: When errors are found in logs, you MUST trace them back to the actual source code in the fence-backend repository.**
 
+**Repository:** https://github.com/fence-technology/fence-backend
+
+**Local path:** The repo should be cloned at `/Users/toni/Code/Fence/fence-backend` (or similar). Use the Read tool to access source files directly.
+
 ### Stack Trace Analysis
 
 When you find an error with a stack trace like:
@@ -222,6 +226,20 @@ You MUST:
 | `/code/.venv/.../fence/core_lib/` | `source/fence-core-lib/fence/core_lib/` |
 | `/code/app/` | `source/app/` |
 | `/code/app/api/` | `source/app/api/` |
+
+### GitHub Links
+
+When reporting errors, include a direct link to the file on GitHub:
+
+```
+https://github.com/fence-technology/fence-backend/blob/master/<local_path>#L<line_number>
+```
+
+**Example:**
+- Local: `source/fence-core-lib/fence/core_lib/deals/mta/services/insights.py:923`
+- GitHub: `https://github.com/fence-technology/fence-backend/blob/master/source/fence-core-lib/fence/core_lib/deals/mta/services/insights.py#L923`
+
+This allows users to click directly to the problematic code.
 
 ### Common Error Patterns
 
@@ -260,6 +278,7 @@ Present findings in a structured format:
 
 **Error:** [error type and message]
 **File:** [local source path]:[line number]
+**GitHub:** [https://github.com/fence-technology/fence-backend/blob/master/[path]#L[line]]
 
 ### Root Cause Analysis
 
