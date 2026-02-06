@@ -34,6 +34,7 @@ ln -s ~/claude-code-skills/productivity/project-daily-prep ~/.claude/skills/proj
 | Skill | Description | Usage |
 |-------|-------------|-------|
 | [project-daily-prep](productivity/project-daily-prep) | Prepare for daily standups by analyzing Linear issues and identifying deviations | `/project-daily-prep [project-name]` |
+| [add-candidates](productivity/add-candidates) | Add hiring candidates to a Notion database from any source (Gmail, Slack, paste, etc.) | `/add-candidates [source-hint]` |
 
 ### Engineering
 
